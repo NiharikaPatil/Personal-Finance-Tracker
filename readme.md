@@ -28,7 +28,7 @@ Make sure you have the following installed on your machine:
 
 1. Clone the repository:
    
-   git clone https://github.com/your-username/personal-finance-tracker.git
+   git clone https://github.com/NiharikaPatil/personal-finance-tracker.git
    cd personal-finance-tracker
 
 2. Install the required Node modules:
