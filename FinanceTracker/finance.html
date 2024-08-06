@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="finance.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home"><img src="../assets/home.png" alt="Home"> Home</a></li>
+                <li><a href="#transactions"><img src="../assets/transaction.png" alt="Transactions"> Transactions</a></li>
+                <li><a href="#summary"><img src="../assets/summary.png" alt="Summary"> Summary</a></li>
+                <li><a href="#" id="logout"><img src="../assets/logout.png" alt="Logout"> Log Out</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Welcome to Personal Finance Tracker</h1>
+        </section>
+
+        <section id="transactions">
+            <h2>Add Transaction</h2>
+            <form id="transaction-form">
+                <input type="text" id="description" placeholder="Description" required>
+                <input type="number" id="amount" placeholder="Amount" required>
+                <select id="category" required>
+                    <option value="salary">Salary</option>
+                    <option value="groceries">Groceries</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="restaurant">Restaurant</option>
+                    <option value="miscellaneous">Miscellaneous</option>
+                </select>
+                <select id="type" required>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <button type="submit">Add Transaction</button>
+            </form>
+
+            <h2>Transaction List</h2>
+            <ul id="transaction-list"></ul>
+        </section>
+
+        <section id="summary">
+            <h2>Financial Summary</h2>
+            <canvas id="expense-chart"></canvas>
+            <canvas id="income-chart"></canvas>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="finance.js"></script>
+</body>
+</html>
